@@ -9,5 +9,11 @@ Dichiariamo chi ha vinto.
 
  */
 
+const numeroUtente = parseInt(prompt('Inserisci un numero'));
+console.log('numeroUtente' , numeroUtente , typeof numeroUtente);
 
+
+
+const numeroComputer = parseInt(prompt('Inserisci un numero'));
+console.log('numeroComputer' , numeroComputer , typeof numeroComputer);
 

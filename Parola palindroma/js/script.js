@@ -4,37 +4,71 @@ Palidroma
 Chiedere all'utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma 
 
- */
-// creo variabile parola e chiedo all'utente di inserirla
-    let parola = prompt('Inserisci una parola');
-    // const parola = ('') per inserirla ma senza chiederla all'utente
-    console.log(parola);
+ */ 
+const userWord = prompt('Inserisci una parola');
+console.log('userWord',userWord, typeof userWord);
 
-    // con .toLowerCase trasformiamo la parola inserita dall' utente tutta  in minuscolo 
-    parola = parola.toLowerCase();
-    console.log(parola);
+palindromicWord(userWord)
+
+function palindromicWord(wordUser){
+  let reversedWord = '';
+for ( let i = wordUser.length - 1; i >= 0; i--){
+  console.log(wordUser[i]);
+  // reversedWord = reverseWord + wordUser[i] ;
+  reversedWord +=  wordUser[i] ;
+}
+
+console.log('reverseWord', reversedWord , reversedWord.length , typeof reversedWord)
+
+if (reversedWord == wordUser){
+  alert('la parola è palindroma')
+}
+else{
+  alert('la parola non è palindroma')
+}
+}
+
+
+
+//  creo variabile parola e chiedo all'utente di inserirla
+//     let parolaUtente = prompt('Inserisci una parola');
+//     // const parola = ('') per inserirla ma senza chiederla all'utente
+//     console.log('parolaUtente' , parolaUtente , parolaUtente.length , typeof parolaUtente );
+
+//     parolaPalindroma(parolaUtente);
 
     
-    // con split ,seguito da una parentesi con apici vuota, separa le stringhe della variabile ottenendo un array che contiene le lettere della parola 
-    let parolaDivisa = parola.split('');
-    console.log(parolaDivisa);
+//     function parolaPalindroma(parola){
 
-    // con reverse  invertiamo le lettere intese come stringhe separate della variabile
-    parolaDivisa.reverse();
-    console.log(parolaDivisa);
+//       // con .toLowerCase trasformiamo la parola inserita dall' utente tutta  in minuscolo 
+//     parola = parola.toLowerCase();
+//     console.log(parola);
 
-    // con join rimette insieme le lettere 
-    let parolaInvertita = parolaDivisa.join('');
-    console.log(parolaInvertita);
+   
+//     con split ,seguito da una parentesi con apici vuota, separa le stringhe della variabile ottenendo un array che contiene le lettere della parola 
+//     let parolaDivisa = parola.split('');
+//     console.log(parolaDivisa);
 
-    // quindi si confronta se la parola inserita è uguale alla parola invertita 
-    // se parola uguale a parola inveretita allora è palindroma 
-    if(parola === parolaInvertita){
-    console.log('La parola da lei inserita è palidroma');
-    // altrimenti non è un parola palindroma 
-  } else {
-    console.log('La parola da lei inserita non è palidroma');
-  }
+//     // con reverse  invertiamo le lettere intese come stringhe separate della variabile
+//     parolaDivisa.reverse();
+//     console.log(parolaDivisa);
+
+//     // con join rimette insieme le lettere 
+//     let parolaInvertita = parolaDivisa.join('');
+//     console.log(parolaInvertita);
+
+//     // quindi si confronta se la parola inserita è uguale alla parola invertita 
+//     // se parola uguale a parola inveretita allora è palindroma 
+//     if(parola === parolaInvertita){
+//     console.log('La parola da lei inserita è palidroma');
+//     // altrimenti non è un parola palindroma 
+//   } else {
+//     console.log('La parola da lei inserita non è palidroma');
+//   }
+
+
+//     }
+    
 // non ho capito bene come si usa poi la funzione 
   // function parolaPalindroma(stringa){
   //   const StringaInversa = stringa.toLowerCase().split('').reverse().join('');
