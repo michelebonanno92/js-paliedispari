@@ -5,26 +5,69 @@ Chiedere all'utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma 
 
  */ 
+
+/* 
 const userWord = prompt('Inserisci una parola');
 console.log('userWord',userWord, typeof userWord);
 
-palindromicWord(userWord)
+isPalindroome(userWord);
 
-function palindromicWord(wordUser){
+
+function isPalindrome(word) {
+  for ( let i = word.length - 1; i >= 0; i--){
+    console.log(word[i]);
+
+    //  reversedWord = reverseWord + word[i] ;
+    reversedWord +=  word[i] ;
+  }
+    console.log('reverseWord', reversedWord , reversedWord.length , typeof reversedWord)
+
+if (reversedWord == wordUser){
+    alert('la parola è palindroma');
+}
+else {
+   alert('la parola non è palindroma');
+}
+
+}
+
+ */ 
+const userWord = prompt('Inserisci una parola');
+console.log('userWord',userWord, typeof userWord);
+
+
+// richiamo della funzione con argomento o paramentri
+const result = isPalindrome(userWord);
+console.log('result',result, typeof result);
+
+if (result){
+  console.log('la parola è palindroma');
+  alert('la parola è palindroma');
+
+}
+else{
+  alert('la parola non è palindroma');
+  console.log('la parola non è palindroma');
+
+}
+
+
+// definizione di una funzione con argomento o paramentri
+function isPalindrome(wordUser){
   let reversedWord = '';
 for ( let i = wordUser.length - 1; i >= 0; i--){
   console.log(wordUser[i]);
   // reversedWord = reverseWord + wordUser[i] ;
-  reversedWord +=  wordUser[i] ;
+  reversedWord += wordUser[i] ;
 }
 
 console.log('reverseWord', reversedWord , reversedWord.length , typeof reversedWord)
 
 if (reversedWord == wordUser){
-  alert('la parola è palindroma')
+  return true;
 }
-else{
-  alert('la parola non è palindroma')
+else {
+  return false;
 }
 }
 
