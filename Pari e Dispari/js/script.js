@@ -20,13 +20,19 @@ while ( userChoice != 'p' && userChoice != 'd') {
 const userNumber = parseInt(prompt('Scegli un numero tra 1 e 5 (compresi):'));
 console.log('userNumber', userNumber , typeof userNumber);
 
+// aggiungiamo un while per validare l'userNumber se mettiamo un stringa oppure se un numero minore di 1 o un numero maggiore di 5 
+while (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
+    userNumber = prompt( ' valore con valido! Scegli un numero tra 1 e 5 (compresi): ')
+}
+
 const pcNumber = generateRandomNumber();
 console.log('pcNumber', pcNumber , typeof pcNumber);
 
 const sum = userNumber + pcNumber;
 console.log('sum', sum , typeof sum);
 
-if (( userChoice == 'p' && evenOrOdd() == 'pari') || ( userChoice == 'd' && evenOrOdd() == 'dispari')) { 
+const sumEvenOrOdd = evenOrOdd(sum)
+if (( userChoice == 'p' && sumEvenOrOdd == 'pari') || ( userChoice == 'd' && sumEvenOrOdd == 'dispari')) { 
     // semplificato scrittura mettendo if ed else if sulla stessa riga separandoli con un or || 
   alert('hai vinto');
 }
@@ -44,8 +50,8 @@ function generateRandomNumber() {
     return num;
 }
 
-function  evenOrOdd () {
-    if ( sum % 2 == 0 ) {
+function  evenOrOdd (num) {
+    if ( num % 2 == 0 ) {
         return 'pari';
     }
     else {
