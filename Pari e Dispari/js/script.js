@@ -32,7 +32,7 @@ const sum = userNumber + pcNumber;
 console.log('sum', sum , typeof sum);
 
 const sumEvenOrOdd = evenOrOdd(sum)
-if (( userChoice == 'p' && sumEvenOrOdd == 'pari') || ( userChoice == 'd' && sumEvenOrOdd == 'dispari')) { 
+if ( userChoice == sumEvenOrOdd ) { 
     // semplificato scrittura mettendo if ed else if sulla stessa riga separandoli con un or || 
   alert('hai vinto');
 }
@@ -52,10 +52,10 @@ function generateRandomNumber() {
 
 function  evenOrOdd (num) {
     if ( num % 2 == 0 ) {
-        return 'pari';
+        return 'p';
     }
     else {
-        return 'dispari';
+        return 'd';
     }
 
 }
