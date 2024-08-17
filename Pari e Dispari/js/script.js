@@ -8,9 +8,14 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 
  */
-
-const userChoice = prompt('scegli p o d');
+// usercìChoice diveneta una let
+let userChoice = prompt('scegli p o d');
 console.log('userChoice', userChoice, typeof userChoice );
+
+// aggiungiamo un while per validare l'userChoice 
+while ( userChoice != 'p' && userChoice != 'd') {
+    userChoice = prompt( ' valore con valido! Scegli solo tra p e d grazie:')
+}
 
 const userNumber = parseInt(prompt('Scegli un numero tra 1 e 5 (compresi):'));
 console.log('userNumber', userNumber , typeof userNumber);
@@ -21,10 +26,8 @@ console.log('pcNumber', pcNumber , typeof pcNumber);
 const sum = userNumber + pcNumber;
 console.log('sum', sum , typeof sum);
 
-if ( userChoice == 'p' && evenOrOdd() == 'pari'){
-  alert('hai vinto');
-}
-else if ( userChoice == 'd' && evenOrOdd() == 'dispari'){
+if (( userChoice == 'p' && evenOrOdd() == 'pari') || ( userChoice == 'd' && evenOrOdd() == 'dispari')) { 
+    // semplificato scrittura mettendo if ed else if sulla stessa riga separandoli con un or || 
   alert('hai vinto');
 }
 else {
