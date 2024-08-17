@@ -21,14 +21,14 @@ console.log('pcNumber', pcNumber , typeof pcNumber);
 const sum = userNumber + pcNumber;
 console.log('sum', sum , typeof sum);
 
-if ( userChoice == 'p' && sum % 2 == 0 ){
-  alert(' hai vinto ')
+if ( userChoice == 'p' && evenOrOdd() == 'pari'){
+  alert('hai vinto');
 }
-else if ( userChoice == 'd' && !sum % 2 == 0){
-  alert(' hai vinto ')
+else if ( userChoice == 'd' && evenOrOdd() == 'dispari'){
+  alert('hai vinto');
 }
 else {
-   alert('ha vinto il computer') 
+   alert('hai perso');
 }
 
 /*
@@ -42,7 +42,7 @@ function generateRandomNumber() {
 }
 
 function  evenOrOdd () {
-    if ( num % 2 == 0 ) {
+    if ( sum % 2 == 0 ) {
         return 'pari';
     }
     else {
