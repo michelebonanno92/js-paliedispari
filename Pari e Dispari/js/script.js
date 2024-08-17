@@ -9,11 +9,9 @@ Dichiariamo chi ha vinto.
 
  */
 
-const numeroUtente = parseInt(prompt('Inserisci un numero'));
-console.log('numeroUtente' , numeroUtente , typeof numeroUtente);
+const sceltaUtente = prompt('scegli Pari o Dispari');
+console.log('sceltaUtente', sceltaUtente );
 
-
-
-const numeroComputer = parseInt(prompt('Inserisci un numero'));
-console.log('numeroComputer' , numeroComputer , typeof numeroComputer);
+const numeroUtente = parseInt(prompt('inserisci un numero'));
+console.log('numeroUtente', numeroUtente );
 

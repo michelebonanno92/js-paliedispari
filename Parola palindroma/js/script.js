@@ -32,62 +32,55 @@ else {
 }
 
  */ 
-const userWord = prompt('Inserisci una parola');
-console.log('userWord',userWord, typeof userWord);
+// const userWord = prompt('Inserisci una parola');
+// console.log('userWord',userWord, typeof userWord);
 
 
-// richiamo della funzione con argomento o paramentri
-const result = isPalindrome(userWord);
-console.log('result',result, typeof result);
-
-if (result){
-  console.log('la parola è palindroma');
-  alert('la parola è palindroma');
-
-}
-else{
-  alert('la parola non è palindroma');
-  console.log('la parola non è palindroma');
-
-}
-
-
-// definizione di una funzione con argomento o paramentri
-function isPalindrome(wordUser){
-  let reversedWord = '';
-for ( let i = wordUser.length - 1; i >= 0; i--){
-  console.log(wordUser[i]);
-  // reversedWord = reverseWord + wordUser[i] ;
-  reversedWord += wordUser[i] ;
-}
-
-console.log('reverseWord', reversedWord , reversedWord.length , typeof reversedWord)
-
-if (reversedWord == wordUser){
-  return true;
-}
-else {
-  return false;
-}
-}
+// const userWordLowerCase = userWord.toLowerCase();
+// console.log('userWordLowerCase',userWordLowerCase, typeof userWordLowerCase);
 
 
 
-//  creo variabile parola e chiedo all'utente di inserirla
-//     let parolaUtente = prompt('Inserisci una parola');
-//     // const parola = ('') per inserirla ma senza chiederla all'utente
-//     console.log('parolaUtente' , parolaUtente , parolaUtente.length , typeof parolaUtente );
 
-//     parolaPalindroma(parolaUtente);
+// // richiamo della funzione con argomento o paramentri
+// const result = isPalindrome(userWordLowerCase);
+// console.log('result',result, typeof result);
+
+// if (result){
+//   console.log('la parola è palindroma');
+//   alert('la parola è palindroma');
+
+// }
+// else{
+//   alert('la parola non è palindroma');
+//   console.log('la parola non è palindroma');
+
+// }
+
+
+// // definizione di una funzione con argomento o paramentri
+// function isPalindrome(wordUser){
+//   let reversedWord = '';
+// for ( let i = wordUser.length - 1; i >= 0; i--){
+//   console.log(wordUser[i]);
+//   // reversedWord = reverseWord + wordUser[i] ;
+//   reversedWord += wordUser[i] ;
+// }
+
+// console.log('reverseWord', reversedWord , reversedWord.length , typeof reversedWord)
+
+// if (reversedWord == wordUser){
+//   return true;
+// }
+// else {
+//   return false;
+// }
+// }
+
+
 
     
-//     function parolaPalindroma(parola){
 
-//       // con .toLowerCase trasformiamo la parola inserita dall' utente tutta  in minuscolo 
-//     parola = parola.toLowerCase();
-//     console.log(parola);
-
-   
 //     con split ,seguito da una parentesi con apici vuota, separa le stringhe della variabile ottenendo un array che contiene le lettere della parola 
 //     let parolaDivisa = parola.split('');
 //     console.log(parolaDivisa);
