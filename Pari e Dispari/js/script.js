@@ -17,12 +17,12 @@ while ( userChoice != 'p' && userChoice != 'd') {
     userChoice = prompt( ' valore con valido! Scegli solo tra p e d grazie:')
 }
 
-const userNumber = parseInt(prompt('Scegli un numero tra 1 e 5 (compresi):'));
+let userNumber = parseInt(prompt('Scegli un numero tra 1 e 5 (compresi):'));
 console.log('userNumber', userNumber , typeof userNumber);
 
 // aggiungiamo un while per validare l'userNumber se mettiamo un stringa oppure se un numero minore di 1 o un numero maggiore di 5 
 while (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
-    userNumber = prompt( ' valore con valido! Scegli un numero tra 1 e 5 (compresi): ')
+    userNumber = parseInt(prompt( ' valore con valido! Scegli un numero tra 1 e 5 (compresi): '))
 }
 
 const pcNumber = generateRandomNumber();
